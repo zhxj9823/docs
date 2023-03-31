@@ -86,7 +86,7 @@ Remove all the included headers and run `gcc -E main.c`.
 Let's configure the program.
 Use the `make menuconfig` command to set the KVM platform as in the following image.
 
-![platform_configuration](./images/platform_configuration.png)
+![platform_configuration](/docs/develop/images/platform_configuration.png)
 
 Save the configuration, exit the menuconfig tab and run `make`.
 Now, let's run it.
@@ -98,7 +98,7 @@ $ qemu-guest -k build/01-extrald-app_kvm-x86_64
 
 The program's output should be the following:
 
-![01-extrald-app-output](./images/01-extrald-app-output.png)
+![01-extrald-app-output](/docs/develop/images/01-extrald-app-output.png)
 
 To see that the information about the section size and its start address is correct we will examine the binary using the readelf utility.
 The readelf utility is used to display information about ELF files, like sections or segments.
@@ -111,7 +111,7 @@ $ readelf -S build/01-extrald-app_kvm-x86_64
 
 The output should look like this:
 
-![readelf_output](./images/readelf_output.png)
+![readelf_output](/docs/develop/images/readelf_output.png)
 
 We can see that `my_section` is indeed among the sections of the ELF.
 Looking at its size we see that it is 0x10 bytes (the equivalent of 16 in decimal).
